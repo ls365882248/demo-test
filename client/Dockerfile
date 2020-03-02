@@ -3,8 +3,7 @@ ADD . /var/app
 WORKDIR /var/app
 ENV PATH="/var/app/node_modules/.bin/:${PATH}"
 ENV TZ Asia/Shanghai
-ARG registry=https://registry.npm.taobao.org
-ARG disturl=https://npm.taobao.org/dist
+ARG registry= https://registry.npmjs.org
 RUN npm install
 RUN npm run build
 # CMD serve -s build
