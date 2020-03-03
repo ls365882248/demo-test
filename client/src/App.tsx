@@ -1,14 +1,30 @@
 import React from 'react';
 import axios from 'axios';
+import { Button, Card } from 'antd';
 import './App.css';
 
+const { useState } = React;
+
 function App() {
-  axios.get('/').then((res) => {
-    console.log(44444, res)
-  })
+  const [message, setMessage] = useState("init message");
+  const getData = () => {
+    axios.get('/').then((res) => {
+      setMessage(res.data);
+    })
+  }
   return (
     <div className="App">
-      HELLO WORLD!!
+      <header>
+        测试页面
+      </header>
+      <main>
+        <Button type="primary" onClick={getData}>
+          Click me!
+        </Button>
+        <p>{message}</p>
+      </main>
+      <footer>
+      </footer>  
     </div>
   );
 }
