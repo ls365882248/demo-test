@@ -1,14 +1,13 @@
 import React from 'react';
 import axios from 'axios';
-import { Button, Card } from 'antd';
+import { Button } from 'antd';
 import './App.css';
 
 const { useState } = React;
-
 function App() {
   const [message, setMessage] = useState("init message");
   const getData = () => {
-    axios.get('/').then((res) => {
+    axios.get('/api', {}).then((res) => {
       setMessage(res.data);
     })
   }
