@@ -1,0 +1,12 @@
+.content-wrap {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  .content-left {
+    background: #f2f2f2;
+  }
+  .content-right {
+    width: 100%;
+    overflow: scroll;
+  }
+}

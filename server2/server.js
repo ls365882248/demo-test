@@ -1,7 +1,16 @@
-const express = require('express')
-const app = express()
-const port = 5000
+const express = require('express');
+const expressGraphql = require('express-graphql');
+const app = express();
 
-app.get('/', (req, res) => res.send('good morning'));
+const schema = require('./schema');
+app.use('/graphql', expressGraphql({
+  schema,
+  graphiql: true
+}));
 
-app.listen(port, () => console.log(`Example app listening on port ${port}!`));
+app.get('/', (req, res) => res.end('index'));
+
+app.listen(8000, (err) => {
+  if (err) { throw new Error(err); }
+  console.log('*** server started ***');
+});

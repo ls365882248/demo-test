@@ -5,13 +5,21 @@ services:
       - "5000:5000"
     command: npm start
     build: ./server
-  # server_2:
-  #   ports:
-  #     - "5001:5000"
-  #   command: npm start
-  #   build: ./server2  
+    restart: always
+  server_2:
+    ports:
+      - "5001:5000"
+    command: npm start
+    build: ./server2
+    restart: always
+  server_express:
+    ports:
+      - "4001:4001"
+    build: ./server-express
+    restart: always
   client:
     ports:
       - "3000:3000"
     command: npm start
-    build: ./client  
+    build: ./client
+    restart: always

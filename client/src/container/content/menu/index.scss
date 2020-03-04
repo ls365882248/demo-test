@@ -1,0 +1,13 @@
+.app-menu {
+  height: 100%;
+  position: relative; 
+  .ant-menu {
+    height: 100%;
+    text-align: left;
+  }
+  .menu-toggle {
+    position: absolute;
+    right: -46px;
+    top: 8px;
+  }
+}
