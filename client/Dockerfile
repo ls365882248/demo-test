@@ -9,4 +9,4 @@ RUN npm run build
 CMD npm start
 # COPY /build /usr/share/nginx/html
 ADD nginx.conf /etc/nginx/conf.d/default.conf
-EXPOSE 80
+EXPOSE 3000
