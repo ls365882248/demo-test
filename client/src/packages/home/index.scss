@@ -1,0 +1,31 @@
+.flex-demo  {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  padding-bottom: 56px;
+  padding-left: 24px;
+  padding-right: 116px;
+  overflow: auto;
+  height: 300px;
+  box-sizing: border-box;
+  border: 1px solid skyblue;
+  .green  {
+    width: 1px;
+    margin: 0 70px;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.1);
+  }
+  .yellow  {
+    display: flex;
+    flex-direction: column;
+    width: 466px;
+    height: 500px;
+    background: yellow;
+  }
+  .gray  {
+    flex: 1;
+    background: gray;
+    height: 199px;
+    width: 300px;
+  }
+}
