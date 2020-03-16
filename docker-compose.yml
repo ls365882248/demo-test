@@ -1,16 +1,5 @@
 version: "3"
-services:
-  nginx: 
-    image: nginx:latest
-    container_name: production_nginx
-    volumes:
-      - ./nginx.conf:/etc/nginx/nginx.conf
-      - ./nginx/error.log:/etc/nginx/error_log.log
-      - ./nginx/cache/:/etc/nginx/cache
-    ports:
-      - 80:80
-      - 443:443
-    restart: always  
+services: 
   server_1:
     ports:
       - "5000:5000"
@@ -25,7 +14,7 @@ services:
     restart: always  
   client:
     ports:
-      - "3000:80"
+      - "3000:3000"
     command: npm start
     build: ./client  
     restart: always  
