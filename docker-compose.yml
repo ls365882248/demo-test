@@ -1,20 +1,25 @@
 version: "3"
-services: 
+services:
   server_1:
     ports:
       - "5000:5000"
     command: npm start
     build: ./server
-    restart: always  
+    restart: always
   server_2:
     ports:
       - "5001:5000"
     command: npm start
-    build: ./server2  
-    restart: always  
+    build: ./server2
+    restart: always
+  server_express:
+    ports:
+      - "4001:4001"
+    build: ./server-express
+    restart: always
   client:
     ports:
       - "3000:3000"
     command: npm start
-    build: ./client  
-    restart: always  
+    build: ./client
+    restart: always
