@@ -4,4 +4,4 @@ ENV TZ Asia/Shanghai
 WORKDIR /var/app
 RUN npm install
 CMD npm start
-EXPOSE 5000
+EXPOSE 4001
