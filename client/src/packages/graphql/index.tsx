@@ -42,6 +42,7 @@ const GraphQL = () => {
   }
   return <div onClick={onCreateOne}>
     hello GraphQL1
+    <img src="./logo192.png" alt="" />
     {genList(data.getMessageList)}
   </div>
 }

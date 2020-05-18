@@ -23,9 +23,6 @@ const { useState } = React;
 
 const AppMenu = () => {
   const [collapsed, setCollapsed] = useState(false);
-  const toggleCollapsed = () => {
-    // setCollapsed(!collapsed);
-  }
 
   return (
     <div style={{ width: 256 }} className='app-menu'>
@@ -43,6 +40,14 @@ const AppMenu = () => {
         <Menu.Item key="2">
           <DesktopOutlined />
           <Link to="/graphql">Graphql</Link>
+        </Menu.Item>
+        <Menu.Item key="3">
+          <DesktopOutlined />
+          <Link to="/skeletor">Skeletor</Link>
+        </Menu.Item>
+        <Menu.Item key="4">
+          <DesktopOutlined />
+          <Link to="/validator">Validator</Link>
         </Menu.Item>
       </Menu>
     </div>

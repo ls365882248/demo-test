@@ -5,7 +5,7 @@ import {
   Switch,
   Route
 } from "react-router-dom";
-import { GraphQL, Home } from '../../packages'
+import { GraphQL, Home, Skeletor, DataValidator } from '../../packages'
 
 import './index.scss'
 const { memo } = React;
@@ -24,6 +24,12 @@ const Content = memo(() => {
             </Route>
             <Route path="/graphql">
               <GraphQL />
+            </Route>
+            <Route path="/skeletor">
+              <Skeletor />
+            </Route>
+            <Route path="/validator">
+              <DataValidator />
             </Route>
           </Switch>
         </div>
